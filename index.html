@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coolio — 2in1 Cooling Spray | Investor Pitch</title>
+  <meta name="description" content="Coolio: cooling spray 2in1 — sejuk instan + wangi parfum untuk badan & pakaian." />
+
+  <!-- Font: Fredoka (judul, bulat seperti logo) + Plus Jakarta Sans (teks) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Partikel kabut semprotan (diisi oleh script.js) -->
+  <canvas id="mist-canvas" aria-hidden="true"></canvas>
+
+  <!-- ============================== NAVBAR ============================== -->
+  <header class="nav" id="nav">
+    <a href="#top" class="logo" aria-label="Coolio">
+      C<span class="o"></span><span class="o"></span>li<span class="o"></span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#masalah">Masalah</a>
+      <a href="#solusi">Solusi</a>
+      <a href="#produk">Produk</a>
+      <a href="#pasar">Pasar</a>
+      <a href="#bisnis">Bisnis</a>
+      <a href="#roadmap">Roadmap</a>
+    </nav>
+    <a href="#investasi" class="btn btn-primary btn-sm nav-cta">Peluang Investasi</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Buka menu"><span></span><span></span></button>
+  </header>
+
+  <main id="top">
+
+    <!-- ============================== HERO ============================== -->
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span><span class="blob b4"></span>
+        <div class="bubbles" id="bubbles"></div>
+      </div>
+
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow"><i class="dot"></i> Investor Pitch 2026</span>
+          <h1>
+            Cool in,<br />
+            <span class="grad-text">Move On.</span>
+          </h1>
+          <p class="lead">
+            <strong>Coolio</strong> adalah <em>2in1 Cooling Spray</em> — satu semprotan ke badan atau pakaian
+            yang langsung terasa <strong>sejuk</strong> dan meninggalkan <strong>wangi parfum</strong> yang
+            menghilangkan bau keringat.
+          </p>
+          <div class="hero-actions">
+            <button class="btn btn-primary" id="sprayBtn">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M7 9h6v12H7zM9 4h2v4H9zm4 1h3v2h-3zM18 3h2v2h-2zm0 4h2v2h-2zm-2-2h2v2h-2z"/></svg>
+              Coba Semprot
+            </button>
+            <a href="#investasi" class="btn btn-ghost">Lihat Peluang →</a>
+          </div>
+          <ul class="hero-pills">
+            <li><span>❄️</span> Sejuk instan</li>
+            <li><span>🍏</span> Green Apple</li>
+            <li><span>👕</span> Badan &amp; pakaian</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual">
+          <div class="orbit o1" aria-hidden="true"></div>
+          <div class="orbit o2" aria-hidden="true"></div>
+          <!-- Botol 3D dibangun oleh script.js di dalam elemen ini -->
+          <div class="bottle-host" id="heroBottle" data-interactive="true"></div>
+          <div class="float-chip c1">❄️ <b>Instant Cooling</b></div>
+          <div class="float-chip c2">🍏 <b>Fresh Fragrance</b></div>
+          <div class="float-chip c3">💧 <b>Fine Mist</b></div>
+          <p class="drag-hint">⟲ Geser untuk memutar botol</p>
+        </div>
+      </div>
+
+      <a href="#masalah" class="scroll-cue" aria-label="Gulir ke bawah"><span></span></a>
+    </section>
+
+    <!-- ============================== MARQUEE ============================== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Instant Cooling</span><i>❄</i><span>Long-lasting Fragrance</span><i>❄</i><span>Body &amp; Clothes</span><i>❄</i><span>Green Apple Scent</span><i>❄</i><span>100 ML Travel Size</span><i>❄</i>
+        <span>Instant Cooling</span><i>❄</i><span>Long-lasting Fragrance</span><i>❄</i><span>Body &amp; Clothes</span><i>❄</i><span>Green Apple Scent</span><i>❄</i><span>100 ML Travel Size</span><i>❄</i>
+      </div>
+    </div>
+
+    <!-- ============================== MASALAH ============================== -->
+    <section class="section" id="masalah">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">01 — Masalah</span>
+          <h2>Panas, gerah, dan bau keringat adalah <span class="hl-pink">masalah harian</span> di negara tropis.</h2>
+          <p>Indonesia panas dan lembap sepanjang tahun. Di perjalanan, di kampus, di kantor, atau saat bekerja di luar ruangan, tubuh cepat gerah dan bau keringat merusak rasa percaya diri.</p>
+        </div>
+
+        <div class="cards-3">
+          <article class="card problem reveal">
+            <div class="card-icon ic-sun">☀️</div>
+            <h3>Gerah &amp; kepanasan</h3>
+            <p>Udara panas dan lembap membuat tubuh tidak nyaman, susah fokus, dan cepat lelah — terutama saat di luar ruangan.</p>
+          </article>
+          <article class="card problem reveal">
+            <div class="card-icon ic-drop">💧</div>
+            <h3>Bau keringat</h3>
+            <p>Keringat menempel di badan dan pakaian. Deodoran biasa hanya untuk ketiak, bukan untuk seluruh badan dan baju.</p>
+          </article>
+          <article class="card problem reveal">
+            <div class="card-icon ic-bag">🎒</div>
+            <h3>Repot bawa banyak produk</h3>
+            <p>Mau sejuk perlu satu produk, mau wangi perlu parfum lain. Tas jadi penuh, pengeluaran jadi dobel.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== SOLUSI ============================== -->
+    <section class="section section-tint" id="solusi">
+      <div class="container solusi-grid">
+        <div class="solusi-copy">
+          <div class="section-head left reveal">
+            <span class="kicker">02 — Solusi</span>
+            <h2>Satu semprotan, <span class="grad-text">dua manfaat.</span></h2>
+            <p>Coolio menggabungkan efek pendingin dan wewangian dalam satu botol ringkas — cukup semprot ke badan atau pakaian.</p>
+          </div>
+
+          <div class="equation reveal">
+            <div class="eq-card eq-cool">
+              <span class="eq-emoji">❄️</span>
+              <h4>Cooling</h4>
+              <p>Sensasi sejuk dan dingin yang langsung terasa di kulit.</p>
+            </div>
+            <span class="eq-op">+</span>
+            <div class="eq-card eq-frag">
+              <span class="eq-emoji">🍏</span>
+              <h4>Fragrance</h4>
+              <p>Wangi parfum Green Apple yang segar dan menutup bau keringat.</p>
+            </div>
+            <span class="eq-op">=</span>
+            <div class="eq-card eq-result">
+              <span class="logo logo-sm">C<span class="o"></span><span class="o"></span>li<span class="o"></span></span>
+              <p>Sejuk, wangi, percaya diri. <b>Move on.</b></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="photo-card reveal" id="tiltCard">
+          <div class="photo-glow"></div>
+          <img src="assets/coolio-mockup.jpg" alt="Botol Coolio 2in1 Cooling Spray Green Apple Scent 100ML" />
+          <span class="photo-tag t1">2in1</span>
+          <span class="photo-tag t2">100 ML</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== PRODUK / ANATOMI 3D ============================== -->
+    <section class="section" id="produk">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">03 — Produk</span>
+          <h2>Didesain untuk dibawa ke mana saja.</h2>
+          <p>Botol bening 100 ML dengan pompa kabut halus, overcap pelindung, dan label playful yang mudah dikenali di rak.</p>
+        </div>
+
+        <div class="anatomy reveal">
+          <div class="spec-col left">
+            <div class="spec" data-spot="cap">
+              <span class="spec-num">A</span>
+              <div><h4>Overcap transparan</h4><p>Melindungi nozzle agar tidak tertekan di dalam tas.</p></div>
+            </div>
+            <div class="spec" data-spot="pump">
+              <span class="spec-num">B</span>
+              <div><h4>Fine mist pump</h4><p>Semprotan kabut halus yang merata ke badan &amp; pakaian.</p></div>
+            </div>
+          </div>
+
+          <div class="anatomy-stage">
+            <div class="bottle-host" id="anatomyBottle" data-interactive="true"></div>
+          </div>
+
+          <div class="spec-col right">
+            <div class="spec" data-spot="label">
+              <span class="spec-num">C</span>
+              <div><h4>Formula 2in1</h4><p>Cooling + fragrance dalam satu cairan, aroma Green Apple.</p></div>
+            </div>
+            <div class="spec" data-spot="body">
+              <span class="spec-num">D</span>
+              <div><h4>100 ML, ringkas</h4><p>Muat di tas, saku jaket, atau dashboard motor.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cara pakai -->
+        <div class="steps" id="cara-pakai">
+          <div class="step reveal"><span class="step-n">1</span><h4>Kocok</h4><p>Kocok botol perlahan sebelum digunakan.</p></div>
+          <div class="step-line"></div>
+          <div class="step reveal"><span class="step-n">2</span><h4>Semprot</h4><p>Semprotkan ke badan atau pakaian dari jarak ±15–20 cm.</p></div>
+          <div class="step-line"></div>
+          <div class="step reveal"><span class="step-n">3</span><h4>Move On</h4><p>Rasakan sejuknya, nikmati wanginya, lanjutkan aktivitas.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== TARGET ============================== -->
+    <section class="section section-tint" id="target">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">04 — Target Pasar</span>
+          <h2>Untuk semua yang <span class="hl-green">aktif bergerak.</span></h2>
+        </div>
+        <div class="persona-grid">
+          <div class="persona reveal"><span>🎓</span><h4>Pelajar &amp; Mahasiswa</h4><p>Segar lagi di sela kelas dan kegiatan.</p></div>
+          <div class="persona reveal"><span>🚇</span><h4>Komuter &amp; Pekerja Kantor</h4><p>Tiba di kantor tetap sejuk setelah perjalanan.</p></div>
+          <div class="persona reveal"><span>🛵</span><h4>Driver &amp; Pekerja Lapangan</h4><p>Teman di bawah terik matahari seharian.</p></div>
+          <div class="persona reveal"><span>🏃</span><h4>Pecinta Olahraga</h4><p>Dingin seketika setelah lari, futsal, atau gym.</p></div>
+          <div class="persona reveal"><span>🧳</span><h4>Traveler</h4><p>Ukuran ringkas untuk perjalanan panjang.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== PASAR ============================== -->
+    <section class="section section-dark" id="pasar">
+      <div class="dark-glow" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker light">05 — Peluang Pasar</span>
+          <h2>Kategori yang besar dan terus tumbuh.</h2>
+          <p>Pasar deodoran &amp; body spray Indonesia terus berkembang, didorong kesadaran kebersihan diri serta konsumen muda dan pria.</p>
+        </div>
+
+        <div class="stats">
+          <div class="stat reveal">
+            <span class="stat-label">Nilai pasar 2025</span>
+            <span class="stat-value">USD <b data-count="350">0</b>M</span>
+            <span class="stat-note">Deodoran &amp; body spray, Indonesia</span>
+          </div>
+          <div class="stat reveal">
+            <span class="stat-label">Proyeksi 2034</span>
+            <span class="stat-value">USD <b data-count="557">0</b>M</span>
+            <span class="stat-note">Perkiraan nilai pasar</span>
+          </div>
+          <div class="stat reveal">
+            <span class="stat-label">Pertumbuhan tahunan</span>
+            <span class="stat-value"><b data-count="5.3" data-decimals="1">0</b>%</span>
+            <span class="stat-note">CAGR 2026–2034</span>
+          </div>
+          <div class="stat reveal">
+            <span class="stat-label">Pangsa format spray</span>
+            <span class="stat-value">±<b data-count="38">0</b>%</span>
+            <span class="stat-note">Format terbesar di kategori (2025)</span>
+          </div>
+        </div>
+
+        <div class="insight-row reveal">
+          <div class="insight"><b>±58%</b> pendapatan kategori berasal dari Pulau Jawa — titik awal distribusi yang padat.</div>
+          <div class="insight"><b>±42%</b> penjualan lewat supermarket &amp; hipermarket — jalur ritel modern sudah terbentuk.</div>
+          <div class="insight"><b>Peluang:</b> konsumen muda &amp; pria menyukai aroma sporty dan kemasan yang vibrant.</div>
+        </div>
+        <p class="source">Sumber: The Report Cubes, <em>Indonesia Deodorants &amp; Body Sprays Market Report and Forecast 2026–2034</em>.</p>
+      </div>
+    </section>
+
+    <!-- ============================== KOMPETITOR ============================== -->
+    <section class="section" id="keunggulan">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">06 — Keunggulan</span>
+          <h2>Kenapa Coolio berbeda?</h2>
+        </div>
+
+        <div class="table-wrap reveal">
+          <table class="compare">
+            <thead>
+              <tr>
+                <th>Manfaat</th>
+                <th class="col-coolio"><span class="logo logo-xs">C<span class="o"></span><span class="o"></span>li<span class="o"></span></span></th>
+                <th>Deodoran biasa</th>
+                <th>Body mist / parfum</th>
+                <th>Kipas / tisu basah</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Efek sejuk instan</td><td class="col-coolio yes">✓</td><td class="no">—</td><td class="no">—</td><td class="yes-soft">✓</td></tr>
+              <tr><td>Wangi parfum</td><td class="col-coolio yes">✓</td><td class="yes-soft">Sebagian</td><td class="yes-soft">✓</td><td class="no">—</td></tr>
+              <tr><td>Bisa ke seluruh badan</td><td class="col-coolio yes">✓</td><td class="no">—</td><td class="yes-soft">✓</td><td class="yes-soft">✓</td></tr>
+              <tr><td>Bisa ke pakaian</td><td class="col-coolio yes">✓</td><td class="no">—</td><td class="yes-soft">✓</td><td class="no">—</td></tr>
+              <tr><td>Satu produk, dua fungsi</td><td class="col-coolio yes">✓</td><td class="no">—</td><td class="no">—</td><td class="no">—</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== MODEL BISNIS ============================== -->
+    <section class="section section-tint" id="bisnis">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">07 — Model Bisnis</span>
+          <h2>Harga terjangkau, distribusi multi-kanal.</h2>
+        </div>
+
+        <div class="biz-grid">
+          <div class="price-card reveal">
+            <span class="price-label">Harga jual (SRP) — 100 ML</span>
+            <!-- EDIT: ganti dengan harga sebenarnya -->
+            <span class="price edit-me">Rp [XX].000</span>
+            <ul>
+              <li>Target margin kotor: <b class="edit-me">[XX]%</b></li>
+              <li>Varian awal: <b>Green Apple</b></li>
+              <li>Produk habis pakai harian → potensi pembelian ulang</li>
+            </ul>
+          </div>
+
+          <div class="channels">
+            <div class="channel reveal"><span>🛒</span><div><h4>E-commerce &amp; social commerce</h4><p>Marketplace dan live shopping untuk menjangkau Gen Z dengan cepat.</p></div></div>
+            <div class="channel reveal"><span>🏪</span><div><h4>Minimarket &amp; ritel modern</h4><p>Penempatan dekat kasir sebagai pembelian impulsif.</p></div></div>
+            <div class="channel reveal"><span>🤝</span><div><h4>B2B &amp; kemitraan</h4><p>Gym, event olahraga, komunitas, dan hotel.</p></div></div>
+            <div class="channel reveal"><span>📦</span><div><h4>Reseller &amp; affiliate</h4><p>Jaringan reseller dan kreator konten untuk pertumbuhan organik.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== ROADMAP ============================== -->
+    <section class="section" id="roadmap">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">08 — Roadmap</span>
+          <h2>Langkah kami ke depan.</h2>
+        </div>
+        <div class="timeline">
+          <div class="tl-item reveal"><span class="tl-dot"></span><span class="tl-phase">Fase 1</span><h4>Launch Green Apple</h4><p>Peluncuran varian pertama melalui e-commerce dan komunitas.</p></div>
+          <div class="tl-item reveal"><span class="tl-dot"></span><span class="tl-phase">Fase 2</span><h4>Varian aroma baru</h4><p>Ekspansi lini aroma dan ukuran mini untuk pembelian impulsif.</p></div>
+          <div class="tl-item reveal"><span class="tl-dot"></span><span class="tl-phase">Fase 3</span><h4>Ritel modern</h4><p>Masuk ke jaringan minimarket dan supermarket di Pulau Jawa.</p></div>
+          <div class="tl-item reveal"><span class="tl-dot"></span><span class="tl-phase">Fase 4</span><h4>Skala nasional &amp; regional</h4><p>Distribusi nasional dan penjajakan pasar Asia Tenggara.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== INVESTASI ============================== -->
+    <section class="section" id="investasi">
+      <div class="container">
+        <div class="invest reveal">
+          <div class="invest-copy">
+            <span class="kicker light">09 — Peluang Investasi</span>
+            <h2>Bergabung membawa Coolio ke seluruh Indonesia.</h2>
+            <!-- EDIT: ganti dengan nilai pendanaan yang dicari -->
+            <p class="ask">Kami membuka pendanaan sebesar <b class="edit-me">Rp [X] Miliar</b> untuk mempercepat produksi, distribusi, dan pemasaran.</p>
+            <a href="#kontak" class="btn btn-white">Jadwalkan Diskusi →</a>
+          </div>
+          <div class="funds">
+            <h4>Penggunaan dana</h4>
+            <!-- EDIT: ubah persentase di data-value dan teksnya -->
+            <div class="fund"><div class="fund-top"><span>Produksi &amp; R&amp;D</span><b class="edit-me">[XX]%</b></div><div class="bar"><i data-value="25"></i></div></div>
+            <div class="fund"><div class="fund-top"><span>Pemasaran &amp; brand</span><b class="edit-me">[XX]%</b></div><div class="bar"><i data-value="25"></i></div></div>
+            <div class="fund"><div class="fund-top"><span>Distribusi &amp; ritel</span><b class="edit-me">[XX]%</b></div><div class="bar"><i data-value="25"></i></div></div>
+            <div class="fund"><div class="fund-top"><span>Operasional</span><b class="edit-me">[XX]%</b></div><div class="bar"><i data-value="25"></i></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== KONTAK ============================== -->
+    <section class="section contact" id="kontak">
+      <div class="container contact-inner reveal">
+        <span class="logo logo-lg">C<span class="o"></span><span class="o"></span>li<span class="o"></span></span>
+        <h2>Cool in, Move On.</h2>
+        <p>Terima kasih atas waktu Anda. Mari berdiskusi lebih lanjut.</p>
+        <!-- EDIT: ganti kontak -->
+        <div class="contact-list">
+          <span>✉️ <b class="edit-me">[email@coolio.id]</b></span>
+          <span>📱 <b class="edit-me">[+62 8xx-xxxx-xxxx]</b></span>
+          <span>📸 <b class="edit-me">[@coolio.id]</b></span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© 2026 Coolio. Semua hak dilindungi.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
